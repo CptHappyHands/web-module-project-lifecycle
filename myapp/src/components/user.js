@@ -19,11 +19,16 @@ class User extends React.Component {
 
   render() {
     // console.log(this.props)
+    const followerData = this.state.followerData;
+    // console.log(followerData);
     return (
       <div>
-        {this.state.followerData.map(
-          (followers) => console.log(followers)
-          //   <h2>{followers}</h2>
+        {followerData ? (
+          followerData.map((followers) => (
+            <Followers id={followers.id} login={followers.login} />
+          ))
+        ) : (
+          <div>Loading</div>
         )}
       </div>
     );

@@ -13,7 +13,7 @@ class App extends React.Component {
     axios
       .get("https://api.github.com/users/CptHappyHands")
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         this.setState({
           ...this.state,
           userData: [res.data.login, res.data.html_url],
@@ -33,7 +33,7 @@ class App extends React.Component {
           <button>Click here</button>
         </form>
         <div id="userInfo">
-          {console.log(this.state)}
+          {/* {console.log(this.state)} */}
           {this.state !== null ? (
             <div>{this.state.userData}</div>
           ) : (
